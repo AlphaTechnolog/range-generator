@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+
+from cli_app import App
+from commands.gen_alphabet import GenAlphabet
+from commands.gen_number import GenNumber
+
+class Range(App):
+    """Generates a ranges."""
+
+    def register_commands(self):
+        self.add_command('gen-alphabet', GenAlphabet)
+        self.add_command('gen-number', GenNumber)
+
+if __name__ == '__main__':
+    app = Range()
+    app.run()
